@@ -4,3 +4,5 @@ def soma(*entry):
 var = 3
 
 print(soma(1,2,var))
+
+#Comentário
