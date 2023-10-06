@@ -13,4 +13,3 @@ nbinteract>=0.0.12
 okpy
 scikit-learn
 tensorflow
-sklearn
