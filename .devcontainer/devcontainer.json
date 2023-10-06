@@ -1,5 +1,5 @@
 {
-	"name": "R Data Science Environment",
+	"name": "My codes",
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Update VARIANT to pick a specific R version: 4, 4.1, 4.0
