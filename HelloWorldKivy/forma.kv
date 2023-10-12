@@ -1,0 +1,8 @@
+<-FullImage>:
+    canvas:
+        Color:
+            rgb: (1, 1, 1)  # Cor do retângulo (branco)
+        Rectangle:
+            texture: self.texture  # Usa a textura atual do widget
+            size: self.width + 20, self.height + 20  # Tamanho do retângulo
+            pos: self.x - 10, self.y - 10  # Posição do retângulo
