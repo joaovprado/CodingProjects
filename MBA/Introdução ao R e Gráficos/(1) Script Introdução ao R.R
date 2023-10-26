@@ -88,7 +88,7 @@ numeros
 
 # Os comandos são "case sensitive", isto é, diferenciam maiúsculas e minúsculas 
 
-Numeros # note que houve um erro, não existe o objeto Numeros (maiúscula)
+#Numeros # note que houve um erro, não existe o objeto Numeros (maiúscula)
 
 # Também não são aceitos caracteres especiais no nome de objetos
 # Uma dica é não complicar no nome dos objetos (evitar maiúsculas, acentos...)
@@ -198,6 +198,7 @@ class(respostas)
 respostas
 
 # Note que a sequência de levels e labels é a correta, isto é, mantém a ordem
+a <- list(1,2,3, 'a')
 
 # Outro tipo de objeto bastante relevante na análise de dados são os data frames
 
@@ -239,19 +240,19 @@ banco_dados_tres <- data.frame(posicao = variavel_um,
 # A seguir, temos dados relacionados ao desempenho escolar de 2.000 pessoas
 # Fonte dos dados: Fávero & Belfiore (2017, Capítulo 16)
 
-load("(2) desempenho_aluno_escola.RData")
+load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) desempenho_aluno_escola.RData")
 
 # Também podemos importar um arquivo em Excel (utilizando o readxl - tidyverse)
 # A seguir, temos dados com a cotação de fechamento mensal de 4 ações
 
 library(readxl)
-preco <- read_excel("(2) precos_acao.xlsx")
+preco <- read_excel("/cloud/project/MBA/Introdução ao R e Gráficos/(2) precos_acao.xlsx")
 
 # Outro formato bastante comum é o (.csv)
 # A seguir, vamos importar dados do Banco Mundial sobre o crescimento do PIB
 # Fonte dos dados: https://databank.worldbank.org/
 
-pib_paises <- read.csv("(2) pib_paises.csv",
+pib_paises <- read.csv("/cloud/project/MBA/Introdução ao R e Gráficos/(2) pib_paises.csv",
                        sep = ",",
                        dec = ".")
 
@@ -285,18 +286,18 @@ dolar <- read.csv("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata
 
 # Salvando em .RData
 
-save(banco_dados_um, file = "(3) dados_salvos_1.RData")
+save(banco_dados_um, file = "/cloud/project/MBA/Introdução ao R e Gráficos/(3) dados_salvos_1.RData")
 
 # Salvando em Excel:
 
 install.packages("writexl")
 library("writexl")
 
-write_xlsx(banco_dados_dois,"(3) dados_salvos_2.xlsx")
+write_xlsx(banco_dados_dois,"/cloud/project/MBA/Introdução ao R e Gráficos/(3) dados_salvos_2.xlsx")
 
 # Salvando em .csv
 
-write.csv(banco_dados_tres, file = "(3) dados_salvos_3.csv", row.names = F)
+write.csv(banco_dados_tres, file = "/cloud/project/MBA/Introdução ao R e Gráficos/(3) dados_salvos_3.csv", row.names = F)
 
 #------------------- Conceitos básicos de manipulação de dados -----------------
 
@@ -305,7 +306,7 @@ write.csv(banco_dados_tres, file = "(3) dados_salvos_3.csv", row.names = F)
 
 # Vamos utilizar como exemplo a base de dados de desempenho dos alunos
 
-load("(2) desempenho_aluno_escola.RData") # Se já estiver carregada, não precisa
+load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) desempenho_aluno_escola.RData") # Se já estiver carregada, não precisa
 
 View(desempenho_aluno_escola)
 
@@ -394,7 +395,7 @@ seleciona_escolas <- desempenho_aluno_escola[desempenho_aluno_escola$escola == "
 
 # A seguir, vamos trabalhar no banco de dados do PIB dos países
 
-pib_paises <- read.csv("(2) pib_paises.csv",
+pib_paises <- read.csv("/cloud/project/MBA/Introdução ao R e Gráficos/(2) pib_paises.csv",
                        sep = ",",
                        dec = ".")
 
