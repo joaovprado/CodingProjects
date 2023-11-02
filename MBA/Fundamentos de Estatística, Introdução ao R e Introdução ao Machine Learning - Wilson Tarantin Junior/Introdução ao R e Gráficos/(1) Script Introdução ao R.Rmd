@@ -361,7 +361,7 @@ A seguir, temos dados relacionados ao desempenho escolar de 2.000 pessoas
 Fonte dos dados: Fávero & Belfiore (2017, Capítulo 16)
 
 ```{r}
-load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) desempenho_aluno_escola.RData")
+load("./(2) desempenho_aluno_escola.RData")
 ```
 
 Também podemos importar um arquivo em Excel (utilizando o readxl - tidyverse)
@@ -371,7 +371,7 @@ A seguir, temos dados com a cotação de fechamento mensal de 4 ações
 ```{r}
 library(readxl)
 
-preco <- read_excel("/cloud/project/MBA/Introdução ao R e Gráficos/(2) precos_acao.xlsx")
+preco <- read_excel("./(2) precos_acao.xlsx")
 ```
 
 Outro formato bastante comum é o (.csv)
@@ -381,7 +381,7 @@ A seguir, vamos importar dados do Banco Mundial sobre o crescimento do PIB
 Fonte dos dados: <https://databank.worldbank.org/>
 
 ```{r}
-pib_paises <- read.csv("/cloud/project/MBA/Introdução ao R e Gráficos/(2) pib_paises.csv",
+pib_paises <- read.csv("./(2) pib_paises.csv",
 
 sep = ",",
 
@@ -428,7 +428,7 @@ Se alterarmos as bases, podemos exportar os bancos de dados utilizados
 Salvando em .RData
 
 ```{r}
-save(banco_dados_um, file = "/cloud/project/MBA/Introdução ao R e Gráficos/(3) dados_salvos_1.RData")
+save(banco_dados_um, file = "./(3) dados_salvos_1.RData")
 ```
 
 Salvando em Excel:
@@ -438,13 +438,13 @@ install.packages("writexl")
 
 library("writexl")
 
-write_xlsx(banco_dados_dois,"/cloud/project/MBA/Introdução ao R e Gráficos/(3) dados_salvos_2.xlsx")
+write_xlsx(banco_dados_dois,"./(3) dados_salvos_2.xlsx")
 ```
 
 Salvando em .csv
 
 ```{r}
-write.csv(banco_dados_tres, file = "/cloud/project/MBA/Introdução ao R e Gráficos/(3) dados_salvos_3.csv", row.names = F)
+write.csv(banco_dados_tres, file = "./(3) dados_salvos_3.csv", row.names = F)
 ```
 
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- Conceitos básicos de manipulação de dados \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
@@ -456,7 +456,7 @@ Na grande maioria dos casos, as bases de dados precisam ser preparadas
 Vamos utilizar como exemplo a base de dados de desempenho dos alunos
 
 ```{r}
-load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) desempenho_aluno_escola.RData") 
+load("./(2) desempenho_aluno_escola.RData") 
 ```
 
 Se já estiver carregada, não precisa
@@ -604,7 +604,7 @@ seleciona_escolas <- desempenho_aluno_escola[desempenho_aluno_escola$escola == "
 A seguir, vamos trabalhar no banco de dados do PIB dos países
 
 ```{r}
-pib_paises <- read.csv("/cloud/project/MBA/Introdução ao R e Gráficos/(2) pib_paises.csv",
+pib_paises <- read.csv("./(2) pib_paises.csv",
 
 sep = ",",
 
@@ -989,7 +989,7 @@ library(esquisse)
 Vamos começar analisando uma variável qualitativa, o perfil do investidor
 
 ```{r}
-load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) perfil_investidor.RData")
+load("./(2) perfil_investidor.RData")
 ```
 
 Como é uma variável categórica, vamos criar um gráfico de barras (geom_bar)
@@ -1162,7 +1162,7 @@ A seguir, vamos elaborar o histograma de notas dos alunos (desempenho escolar)
 O banco de dados é o mesmo que já utilizamos anteriormente
 
 ```{r}
-load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) desempenho_aluno_escola.RData")
+load("./(2) desempenho_aluno_escola.RData")
 ```
 
 Iniciando com o gráfico básico (geom_histogram)
@@ -1208,7 +1208,7 @@ Na sequência, vamos elaborar um gráfico de dispersão dos pontos
 Os dados são do atlas ambiental sobre distritos da cidade de São Paulo
 
 ```{r}
-load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) atlas_ambiental.RData")
+load("./(2) atlas_ambiental.RData")
 ```
 
 Iniciando com o gráfico básico (geom_point)
@@ -1290,7 +1290,7 @@ Neste caso, vamos utilizar o banco de dados com preços de ações
 ```{r}
 library(readxl)
 
-preco_acao <- read_excel("/cloud/project/MBA/Introdução ao R e Gráficos/(2) precos_acao.xlsx")
+preco_acao <- read_excel("./(2) precos_acao.xlsx")
 ```
 
 Como temos 4 ações no banco de dados, vamos implementar o seguinte gráfico
@@ -1402,7 +1402,7 @@ Fonte: Fávero & Belfiore (2017, Capítulo 12)
 ```{r}
 library(readxl) # Se já tiver carregado antes, não precisa fazer novamente
 
-tempo_dist <- read_excel("/cloud/project/MBA/Introdução ao R e Gráficos/(2) tempo_dist.xls")
+tempo_dist <- read_excel("./(2) tempo_dist.xls")
 ```
 
 Vamos trabalhar o gráfico de calor no contexto das correlações entre variáveis
@@ -1508,7 +1508,7 @@ Vemos a distribuição dos dados nas variáveis e eventuais outliers univariados
 Inicialmente, vamos apresentar o boxplot de uma única variável
 
 ```{r}
-load("/cloud/project/MBA/Introdução ao R e Gráficos/(2) atlas_ambiental.RData")
+load("./(2) atlas_ambiental.RData")
 
 var_boxplot <- atlas_ambiental[,c(1,3)]
 
