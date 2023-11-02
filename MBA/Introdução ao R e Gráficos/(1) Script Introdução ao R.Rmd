@@ -312,7 +312,7 @@ banco_dados_um <- data.frame(var1 = c("pessoa 1", "pessoa 2", "pessoa 3"),
 
 var2 = c(42, 55, 28))
 
-print(banco_dados_um)
+print(banco_dados_um) 
 ```
 
 Note que foi criado um objeto do tipo "Data" no ambiente do RStudio
